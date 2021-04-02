@@ -1,35 +1,27 @@
 
-hmbMenu.onshow=function(s){
+hmbMenu.onshow=function(x){
   hmbMenu.hidden = false
 }
 
-hmbMenu.onclick=function(s){ // when just click the control. 's' is
-                              // the object returned
-    if (typeof(s) == "object") { // do nothing - they just clicked on the control
+hmbMenu.onclick=function(s){ 
+    if (typeof(s) == "object") {
        return
     } else {
        switch(s) {
-            case "Dessert Vote":
-                // Go to the Overview form
-                ChangeForm(dessertVoting)
-                break
-       }  
-       switch(s){
+        case "Dessert Voting":
+            ChangeForm(dessertVoting)
+            break;
         case "Describe You":
             ChangeForm(describeYou)
-            break
-        }
-        switch(s){
-        case "Fav Exerciz":
+            break;
+        case "Favorite Exercises":
             ChangeForm(favExercises)
-            break
-        }
-        switch(s){
+            break;
         case "Mobile Nav":
             ChangeForm(mobileNav)
-            break
+            break;
         }
-   } 
+    }
 }
 
 

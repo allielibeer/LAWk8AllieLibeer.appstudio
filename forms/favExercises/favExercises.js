@@ -7,16 +7,20 @@ favExercises.onshow=function(){
       selExercises.addItem(exercises[i])
 }
 
+let sel1 = ""
+let sel2 = ""
 
 btnDone.onclick=function(){
-  // returns array of the choices' text
-  
-  if (selExercises.value == "situps" || "planks")   // picked the first choice
-      NSB.MsgBox(`You chose situps and planks - those are the two core exercises. `)
-   else 
+    sel1 = coreExercises.includes(selExercises.text[0])
+    sel2 = coreExercises.includes(selExercises.text[1])
+    
+  if (sel1 == true) {
+        if (sel2 == true) 
+       NSB.MsgBox(`You chose ${selExercises.text[0]} and ${selExercises.text[1]} - those are the two core exercises.`)
+  } else 
       NSB.MsgBox(`You did not pick the two core exercises.`)
-
 }
+
 
 btnChange2.onclick=function(){
     ChangeForm(mobileNav)
